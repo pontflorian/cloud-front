@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {ProfilI} from '../modele/profil';
 import {ServEtudiantsService} from '../services/serv-etudiants.service';
 
 @Component({

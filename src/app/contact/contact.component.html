@@ -1,1 +1,11 @@
 <h1>I can contact you OUHOU</h1>
+<section>
+  <form #f="ngForm" (ngSubmit)="soumissionFormulaire(f)">
+    <input name="nom" [(ngModel)]="contact.nom" (input)="suiviInput()" placeholder="Nom" type="text" required>
+    <input name="email" [(ngModel)]="contact.email" placeholder="Email" type="email" required>
+    <input name="sujet" [(ngModel)]="contact.sujet" placeholder="Sujet de votre message" type="text" required>
+    <textarea name="message" [(ngModel)]="contact.message" placeholder="Quelle est votre demande ?"></textarea>
+    <input type="submit" value="Envoyer" [disabled]="f.invalid">
+    <input type="reset" value="Annuler">
+  </form>
+</section>
