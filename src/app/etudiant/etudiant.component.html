@@ -1,0 +1,7 @@
+<p>Etudiant here</p>
+
+<article *ngIf="indexEtudiant >= 0">
+  <h3>{{ indexEtudiant }} | Nom de l'étudiant, prénom de l'étudiant : {{servEtu.listeEtudiants[indexEtudiant].nom}}, {{servEtu.listeEtudiants[indexEtudiant].prenom}}</h3>
+  <p><em>{{servEtu.listeEtudiants[indexEtudiant].promo}}</em></p>
+  <img [src]="servEtu.listeEtudiants[indexEtudiant].photo" [width]="50" [height]="50"/>
+</article>
