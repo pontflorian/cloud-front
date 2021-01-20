@@ -1,8 +1,23 @@
+<!--
 <nav>
-  <ul>
+  <ul class="mat-footer-cell">
     <li><a href>Mentions Légales</a></li>
     <li><a href>RGPD</a></li>
     <li><a href>Contact</a></li>
     <li><a href>Copyright</a></li>
   </ul>
 </nav>
+-->
+
+<div style="position: fixed; bottom: 0; width: 100%">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <div>
+        <a mat-button routerLink="/">Mentions Légales</a>
+        <a mat-button routerLink="/">RGPD</a>
+        <a mat-button routerLink="/contact">Contact</a>
+        <a mat-button routerLink="/">Copyright</a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

@@ -34,6 +34,7 @@ export class ContactComponent implements OnInit {
   soumissionFormulaire(f: NgForm): void{
     console.log('Formulaire envoyé');
     console.log('Données envoyées', f.value);
+    alert('Votre message a été envoyé !');
   }
 
 }

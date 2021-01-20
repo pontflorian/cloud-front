@@ -13,6 +13,11 @@ import { EtudiantComponent } from './etudiant/etudiant.component';
 import { Erreur404Component } from './erreur404/erreur404.component';
 import { ContactComponent } from './contact/contact.component';
 import { ListeEtudiantsComponent } from './liste-etudiants/liste-etudiants.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -30,7 +35,12 @@ import { ListeEtudiantsComponent } from './liste-etudiants/liste-etudiants.compo
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCardModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

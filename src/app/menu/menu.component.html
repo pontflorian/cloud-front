@@ -1,8 +1,10 @@
-<nav>
-  <ul>
-    <li><a href routerLink="/">Accueil</a></li>
-    <li><a href routerLink="/listeEtudiants">Liste des étudiants</a></li>
-    <li><a href routerLink="/etudiant">Etudiant</a> </li>
-    <li><a href routerLink="/contact">Contact</a></li>
-  </ul>
-</nav>
+<mat-toolbar color="primary" class="navbar">
+  <mat-toolbar-row>
+    <h1 style="font-size: larger">Outil de gestion des étudiants</h1>
+    <div>
+      <a mat-button routerLink="/">Accueil</a>
+      <a mat-button routerLink="/listeEtudiants">Liste des étudiants</a>
+      <a mat-button routerLink="/contact">Contact</a>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

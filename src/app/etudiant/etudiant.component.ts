@@ -8,9 +8,8 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./etudiant.component.css']
 })
 export class EtudiantComponent implements OnInit {
-  indexEtudiant = 0;
   @Input()
-  profil: any;
+  indexEtudiant = 0;
 
   constructor(public servEtu: ServEtudiantsService, private routeParameters: ActivatedRoute) { }
 

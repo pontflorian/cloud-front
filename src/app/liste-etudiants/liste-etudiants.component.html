@@ -1,8 +1,5 @@
-<!-- balise normale-->
-<article *ngFor="let etudiant of servEtu.listeEtudiants; let i = index">
-  <h3>{{ i }} | Nom de l'étudiant, prénom de l'étudiant : {{etudiant.nom}}, {{etudiant.prenom}}</h3>
-  <p><em>{{etudiant.promo}}</em></p>
-  <a href routerLink="/etudiant/{{ i }}">
-    <img [src]="etudiant.photo" [width]="50" [height]="50"/>
-  </a>
-</article>
+<div style="display: flex; flex-wrap: wrap; margin: 20px" >
+  <div *ngFor="let etudiant of servEtu.listeEtudiants; let i = index">
+    <app-etudiant [indexEtudiant]="i"></app-etudiant>
+  </div>
+</div>
