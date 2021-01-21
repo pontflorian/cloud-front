@@ -10,8 +10,39 @@
     Spécialités : {{ servEtu.listeEtudiants[indexEtudiant].specialites }} <br>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button routerLink="/etudiant/{{ indexEtudiant }}">View</button>
-    <button mat-button>Edit</button>
-    <button mat-button>Delete</button>
+    <button mat-button (click)="editerEtudiant()">Edit</button>
+    <button mat-button (click)="supprimerEtudiant()" routerLink="/listeEtudiants">Delete</button>
   </mat-card-actions>
 </mat-card>
+
+<div *ngIf="showEdit">
+  <h1 style="text-align: center">Modifier l'étudiant</h1>
+  <section>
+    <form #f="ngForm" (ngSubmit)="soumissionFormulaire(f)">
+      <label>
+        <input name="nom" [(ngModel)]="newProfil.nom" placeholder="Nouveau nom" type="text" required>
+      </label>
+      <label>
+        <input name="prenom" [(ngModel)]="newProfil.prenom" placeholder="Nouveau prénom" type="text">
+      </label>
+      <label>
+        <input name="mail" [(ngModel)]="newProfil.mail" placeholder="Nouveau email" type="mail" required>
+      </label>
+      <label>
+        <input name="age" [(ngModel)]="newProfil.age" placeholder="Nouvel age" type="text" required>
+      </label>
+      <label>
+        <input name="promo" [(ngModel)]="newProfil.promo" placeholder="Nouvelle promo" type="text">
+      </label>
+      <label>
+        <input name="specialite" [(ngModel)]="newProfil.specialites" placeholder="Nouvelle(s) spécialité(s)" type="text" required="">
+      </label>
+      <label>
+        <input name="photo" [(ngModel)]="newProfil.photo" placeholder="Nouvelle photo" type="text" required="">
+      </label>
+      <input type="submit" value="Envoyer" [disabled]="f.invalid">
+      <input type="reset" value="Annuler" (click)="showEdit = false">
+    </form>
+  </section>
+</div>
+
